@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfmExperiments.Tests", "TfmExperiments.Tests\TfmExperiments.Tests.csproj", "{D86BB881-2EAF-4E6B-BDBE-A979BF4E296E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfmExperiments", "TfmExperiments\TfmExperiments.csproj", "{14AE8D9D-04FA-4B91-BC8D-372E0A096D53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D86BB881-2EAF-4E6B-BDBE-A979BF4E296E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D86BB881-2EAF-4E6B-BDBE-A979BF4E296E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D86BB881-2EAF-4E6B-BDBE-A979BF4E296E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D86BB881-2EAF-4E6B-BDBE-A979BF4E296E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14AE8D9D-04FA-4B91-BC8D-372E0A096D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14AE8D9D-04FA-4B91-BC8D-372E0A096D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14AE8D9D-04FA-4B91-BC8D-372E0A096D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14AE8D9D-04FA-4B91-BC8D-372E0A096D53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

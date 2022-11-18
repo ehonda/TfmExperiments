@@ -2,5 +2,8 @@
 
 set -euo pipefail
 
-docker image build -t tfm-experiment .
-docker container run --rm tfm-experiment
+dotnetVersion=${1:-7.0}
+echo -e "\e[35mUsing net$dotnetVersion\e[0m"
+
+docker image build -t tfm-experiments --build-arg dotnetVersion="$dotnetVersion" .
+docker container run --rm tfm-experiments
