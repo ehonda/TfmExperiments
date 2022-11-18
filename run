@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -euo pipefail
+
+docker image build -t tfm-experiment .
+docker container run --rm tfm-experiment
