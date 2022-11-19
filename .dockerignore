@@ -6,3 +6,4 @@ run
 .git
 **/bin
 **/obj
+*.md

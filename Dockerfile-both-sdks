@@ -1,0 +1,20 @@
+﻿FROM alpine:3.17
+
+RUN apk add --no-cache \
+    dotnet6-sdk \
+    dotnet7-sdk
+
+ARG dotnetVersion=7.0
+ENV dotnetVersion=$dotnetVersion
+WORKDIR /app
+COPY . .
+RUN dotnet build -c Release -f net$dotnetVersion
+
+ENTRYPOINT exec dotnet run -c Release -f net${dotnetVersion} --project TfmExperiments/TfmExperiments.csproj
+#ENTRYPOINT exec dotnet run -c Release -f net6.0 --project TfmExperiments/TfmExperiments.csproj
+#ENTRYPOINT [ "/bin/sh", "-c", \
+#    "dotnet", \
+#    "run", \
+#    "-c", "Release", \
+#    "-f", "net$dotnetVersion", \
+#    "--project", "TfmExperiments/TfmExperiments.csproj"]

@@ -37,7 +37,7 @@ executor failed running [/bin/sh -c dotnet build -c Release -f net$dotnetVersion
 In `.csproj`:
 
 ```xml
-<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+<TargetFramework>net6.0</TargetFramework>
 ```
 
 Then `net7.0` doesn't work:
@@ -64,7 +64,16 @@ Using net7.0
 executor failed running [/bin/sh -c dotnet build -c Release -f net$dotnetVersion]: exit code: 1
 ```
 
+## Using base image with both sdks
+
+Works, we can build for either framework. Open questions
+
+* What about a `net7.0` project referencing a `net6.0` project, how do we build that?
+* Should we not specify `-f` at all if we have both sdks?
+
 ## Ideas
 
-* What about that `project.assets.json` in the error message?
-* Build for `net7.0`, run for `net6.0`?
+* What about that `project.assets.json` in the error message? ❌
+* Build for `net7.0`, run for `net6.0`? ❌
+* Base image that has both sdks, use one or the other? ✅
+* Why can't we build for just one target framework, having both specified?
